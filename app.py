@@ -34,6 +34,14 @@ def cart():
     cart_items = session.get("cart", [])
     total = sum(item["price"] for item in cart_items)
     return render_template("cart.html", cart=cart_items, total=total)
+@app.route("/remove/<int:index>")
+def remove(index):
+    cart = session.get("cart", [])
+    if 0 <= index < len(cart):
+        cart.pop(index)
+        session["cart"] = cart
+    return redirect(url_for("cart"))
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
+    

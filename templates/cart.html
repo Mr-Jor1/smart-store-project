@@ -1,9 +1,12 @@
-h1>Your Cart</h1>
+<h1>Your Cart</h1>
 
 {% if cart %}
 <ul>
   {% for item in cart %}
-    <li>{{ item.name }} - {{ item.price }} SAR</li>
+    <li>
+      {{ item.name }} - {{ item.price }} SAR
+      <a href="{{ url_for('remove', index=loop.index0) }}">Remove</a>
+    </li>
   {% endfor %}
 </ul>
 
@@ -12,4 +15,4 @@ h1>Your Cart</h1>
 <p>Cart is empty</p>
 {% endif %}
 
-<a href="/">Back to home</a>
+<a href="{{ url_for('products') }}">Back to products</a>
