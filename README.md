@@ -49,3 +49,13 @@ Notes
 	•	Project focuses on backend logic and routing
 
 
+## Screenshots
+
+### Home Page
+![Home](screenshots/home.jpeg)
+
+### Products Page
+![Products](screenshots/products.jpeg)
+
+### Cart Page
+![Cart](screenshots/cart.jpeg)
