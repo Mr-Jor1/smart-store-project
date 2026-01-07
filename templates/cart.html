@@ -15,4 +15,8 @@
 <p>Cart is empty</p>
 {% endif %}
 
+<p>
+  <a href="{{ url_for('clear_cart') }}">Clear cart</a>
+</p>
+
 <a href="{{ url_for('products') }}">Back to products</a>
